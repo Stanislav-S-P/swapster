@@ -1,0 +1,1387 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ru,en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Swapster</title>
+  <link rel="stylesheet" href="{% static 'css/normalize1.css' %}?v=4.0">
+  <link rel="stylesheet" href="{% static 'css/style.css' %}?v=6.0">
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container mob-vers-video">
+      <div class="header-top">
+        <nav class="header-nav flex">
+          <a href="#" class="header-link-image"><img src="{% static 'img/logo1.svg' %}" class="header-image" alt="logo"></a>
+          <ul class="list-reset header-list pc flex">
+            <li class="header-list-item">
+              <a href="#chance" class="header-link">Возможности</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#exchange" class="header-link">Обмен</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#rates" class="header-link">Тарифы</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#what-new" class="header-link">Что нового</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#faq" class="header-link">FAQ</a>
+            </li>
+            <li class="header-list-item">
+              <a href="#contacts" class="header-link">Контакты</a>
+            </li>
+          </ul>
+          <div class="container-lang">
+            <div class="language flex btn-lang" data-google-lang="en">
+                <svg class="header-svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5M16.5 9C16.5 4.85786 13.1421 1.5 9 1.5M16.5 9H1.5M9 16.5C4.85786 16.5 1.5 13.1421 1.5 9M9 16.5C10.3807 16.5 11.5 13.1421 11.5 9C11.5 4.85786 10.3807 1.5 9 1.5M9 16.5C7.61929 16.5 6.5 13.1421 6.5 9C6.5 4.85786 7.61929 1.5 9 1.5M1.5 9C1.5 4.85786 4.85786 1.5 9 1.5" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                RU
+              <!-- <button class="btn-reset btn btn-lang" data-google-lang="ru">RU</button> -->
+           </div>
+          </div>
+          <button class="btn-reset btn btn-start all-btn class btn-wid"><a href="https://t.me/SwapsterBot">Запустить Swapster</a></button>
+          <nav class="wrap-myMenu mob">
+            <div class="mob-version-menu-btn flex">
+              <button class="btn-reset btn btn-start all-btn mob class"><a href="https://t.me/SwapsterBot">Запустить</a></button>
+              <button class="main-myButton btn-reset">☰</button>
+            </div>
+        </nav>
+        </nav>
+      </div>
+      <div class="spec-mob-video">
+        <div class="header-center">
+          <div class="mob">
+            <div class="content">
+              <div class="menu-mob-vers">
+                <ul class="list-reset list-mob">
+                  <li class="header-list-item">
+                    <a href="#chance" class="header-link link-mob">Возможности</a>
+                  </li>
+                  <li class="header-list-item">
+                    <a href="#exchange" class="header-link link-mob">Обмен</a>
+                  </li>
+                  <li class="header-list-item">
+                    <a href="#rates" class="header-link link-mob">Тарифы</a>
+                  </li>
+                  <li class="header-list-item">
+                    <a href="#what-new" class="header-link link-mob">Что нового</a>
+                  </li>
+                  <li class="header-list-item">
+                    <a href="#faq" class="header-link link-mob">FAQ</a>
+                  </li>
+                </ul>
+                    <div class="language flex">
+                      <svg class="header-svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5M16.5 9C16.5 4.85786 13.1421 1.5 9 1.5M16.5 9H1.5M9 16.5C4.85786 16.5 1.5 13.1421 1.5 9M9 16.5C10.3807 16.5 11.5 13.1421 11.5 9C11.5 4.85786 10.3807 1.5 9 1.5M9 16.5C7.61929 16.5 6.5 13.1421 6.5 9C6.5 4.85786 7.61929 1.5 9 1.5M1.5 9C1.5 4.85786 4.85786 1.5 9 1.5" stroke="white" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      <button class="btn-reset btn btn-lang" data-google-lang="en">In English</button>
+                      <!-- <button class="btn-reset btn btn-lang" data-google-lang="ru">RU</button> -->
+                   </div>
+                </div>
+              <div class="container-contacts-three">
+                <ul class="list-reset contacts-list-two">
+                  <li class="contacts-list-two-item flex all-li-mob">
+                    <span class="contacts-item-descr mob-all-descr">Круглосуточная поддержка</span>
+                    <a class="contacts-link-two mob-all-link" href="#">@SwapsterSupport</a>
+                  </li>
+                  <li class="flex all-li-mob">
+                    <div class="contacts-list-two-item item-mob flex">
+                      <span class="contacts-item-descr mob-all-descr">Телеграм-бот</span>
+                      <a class="contacts-link-two mob-all-link" href="#">@SwapsterBot</a>
+                    </div>
+                    <div class="contacts-list-two-item flex">
+                      <span class="contacts-item-descr mob-all-descr">Email</span>
+                      <a class="contacts-link-two mob-all-link" href="mailto:info@swapster.fi">info@swapster.fi</a>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <p class="logo-descr">© 2022 Swapster. Надёжное хранилище криптовалют. Выгодный обмен и моментальный вывод на карты всех российских банков.</p>
+            </div>
+          </div>
+          <h1 class="header-title">Храни, меняй, <br>зарабатывай</h1>
+          <p class="header-descr">Swapster — надёжный кошелёк и биржа в простом и понятном чат-боте.</p>
+          <div class="header-wrapper">
+            <button class="btn-reset btn glob-btn-start two-all-btn class"><a class="syk" href="https://t.me/SwapsterBot">Запустить Swapster</a></button>
+            <button class="btn-reset btn btn-learn-more class all-btn"><a href="#know">Узнать больше</a></button>
+          </div>
+        </div>
+        <div>
+          <div class="btc-container spec-pc-wid pc">
+            <ul class="list-reset list-btc flex">
+              <li class="btc-item">
+                <div class="test">
+                  <div class="flex cont-left">
+                    <img src="{% static 'img/Iconbtc1.jpg' %}" alt="btc">
+                    <div class="osn-cont flex">
+                      <div class="text-cont-left flex"><span class="name-left">Bitcoin</span><span class="name-right">BTC</span></div>
+                      <div class="text-cont-left flex text-cont-rights"><span class="name-left" id="price_1"></span><span class="bot-name-right bot-right-1" id="procent_1"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="btc-item">
+                <div class="test">
+                  <div class="flex cont-left">
+                    <img src="{% static 'img/Iconeth1.jpg' %}" alt="eth">
+                    <div class="osn-cont flex">
+                      <div class="text-cont-left flex"><span class="name-left">Ethereum</span><span class="name-right">ETH</span></div>
+                      <div class="text-cont-left flex text-cont-rights"><span class="name-left" id="price_2"></span><span class="bot-name-right bot-right-2" id="procent_2"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="btc-item">
+                <div class="test">
+                  <div class="flex cont-left">
+                    <img src="{% static 'img/Iconbnb1.jpg' %}" alt="btc">
+                    <div class="osn-cont flex">
+                      <div class="text-cont-left flex"><span class="name-left">BNB</span><span class="name-right">BNB</span></div>
+                      <div class="text-cont-left flex text-cont-rights"><span class="name-left" id="price_3"></span><span class="bot-name-right bot-right-3" id="procent_3"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="btc-item">
+                <div class="test">
+                  <div class="flex cont-left">
+                    <img src="{% static 'img/Icontron1.jpg' %}" alt="btc">
+                    <div class="osn-cont flex">
+                      <div class="text-cont-left flex"><span class="name-left">Tron</span><span class="name-right">TRX</span></div>
+                      <div class="text-cont-left flex text-cont-rights"><span class="name-left" id="price_4"></span><span class="bot-name-right bot-right-4" id="procent_4"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="btc-container spec-mob-wid mob">
+            <ul class="list-reset list-btc flex">
+              <li class="btc-item">
+                <div class="test">
+                  <div class="flex cont-left">
+                    <img src="{%  static 'img/11.jpg' %}" alt="btc">
+                    <div class="osn-cont flex">
+                      <div class="text-cont-left flex"><span class="name-left">Bitcoin</span><span class="name-right">BTC</span></div>
+                      <div class="text-cont-left flex text-cont-rights"><span class="bot-name-right bot-right-1_mob" id="procent_mob_1_1"></span><span class="name-left" id="price_mob_1"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="btc-item">
+                <div class="test">
+                  <div class="flex cont-left">
+                    <img src="{% static 'img/21.jpg' %}" alt="eth">
+                    <div class="osn-cont flex">
+                      <div class="text-cont-left flex"><span class="name-left">Ethereum</span><span class="name-right">ETH</span></div>
+                      <div class="text-cont-left flex text-cont-rights"><span class="bot-name-right bot-right-2_mob" id="procent_mob_2_2"></span><span class="name-left" id="price_mob_2"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="btc-item">
+                <div class="test">
+                  <div class="flex cont-left">
+                    <img src="{% static 'img/31.jpg' %}" alt="btc">
+                    <div class="osn-cont flex">
+                      <div class="text-cont-left flex"><span class="name-left">BNB</span><span class="name-right">BNB</span></div>
+                      <div class="text-cont-left flex text-cont-rights"><span class="bot-name-right bot-right-3_mob" id="procent_mob_3_3"></span><span class="name-left" id="price_mob_3"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="btc-item">
+                <div class="test">
+                  <div class="flex cont-left">
+                    <img src="{% static 'img/41.jpg' %}" alt="btc">
+                    <div class="osn-cont flex">
+                      <div class="text-cont-left flex"><span class="name-left">Tron</span><span class="name-right">TRX</span></div>
+                      <div class="text-cont-left flex text-cont-rights"><span class="bot-name-right bot-right-4_mob" id="procent_mob_4_4"></span><span class="name-left" id="price_mob_4"></span></div>
+                    </div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <p class="header-time mob-version" id="current_date_time_block"></p>
+        </div>
+        <video class="header_video mob" playsinline preload="true" autoplay="true" loop="true" muted>
+          <source src="{% static 'video/animheader.mp4' %}" type="video/mp4">
+        </video>
+      </div>
+      <video class="header_video pc" playsinline preload="true" autoplay="true" loop="true" muted>
+        <source src="{% static 'video/animheader.mp4' %}" type="video/mp4">
+      </video>
+    </div>
+  </header>
+
+  <main class="main">
+    <section id="chance" class="chance">
+      <div class="container">
+        <div class="chance-top" id="know">
+          <ul class="list-reset chance-list flex">
+            <li class="chance-item flex">
+              <svg class="chance-svg-one all-svg" width="64" height="64" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.8125 25H21.375" stroke="#1673F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M16.5625 27.5625V12.4375H21.7188C22.9039 12.4375 24.0406 12.9083 24.8786 13.7464C25.7167 14.5844 26.1875 15.7211 26.1875 16.9062C26.1875 18.0914 25.7167 19.2281 24.8786 20.0661C24.0406 20.9042 22.9039 21.375 21.7188 21.375H13.8125" stroke="#1673F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.45008 19.0333L4.55009 16.1333L1.66675 19.0333" stroke="#1673F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M32.5505 20.9668L35.4505 23.8668L38.3505 20.9668" stroke="#1673F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M35.4326 23.8667V20C35.4326 11.4667 28.5159 4.56665 19.9992 4.56665C15.1326 4.56665 10.7826 6.83337 7.94922 10.35" stroke="#1673F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.56714 16.1333V20C4.56714 28.5333 11.4838 35.4333 20.0005 35.4333C24.8671 35.4333 29.2171 33.1666 32.0505 29.6499" stroke="#1673F0" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="chance-flex-title">
+                <h3 class="chance-item-title class">Не&nbsp;плати комиссии за&nbsp;переводы</h3>
+                <p class="chance-item-descr">
+                  Транзакции другим пользователям Swapster абсолютно бесплатны. Вы&nbsp;можете одним кликом отправить другу любую криптовалюту за&nbsp;секунду&nbsp;&mdash; достаточно знать его&nbsp;ID.
+                </p>
+              </div>
+            </li>
+            <li class="chance-item flex">
+              <svg class="chance-svg-two all-svg" width="64" height="64" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.6967 28.8388C12.929 34.1421 5.85791 34.1421 5.85791 34.1421C5.85791 34.1421 5.85791 27.071 11.1612 25.3032" stroke="#396999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M30.6066 16.4644L20 27.071L12.929 19.9999L23.5356 9.39333C27.5518 5.37705 31.5681 5.41623 33.2809 5.67179C33.5447 5.7111 33.7888 5.83409 33.9773 6.02263C34.1659 6.21117 34.2889 6.45529 34.3282 6.71902C34.5837 8.43185 34.6229 12.4481 30.6066 16.4644Z" stroke="#396999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M28.8388 18.2322V28.321C28.8388 28.4852 28.8065 28.6477 28.7437 28.7994C28.6809 28.951 28.5888 29.0888 28.4727 29.2049L23.4193 34.2583C23.2593 34.4183 23.0589 34.5318 22.8395 34.5869C22.62 34.6419 22.3897 34.6363 22.1732 34.5708C21.9567 34.5052 21.762 34.3821 21.6099 34.2146C21.4578 34.0471 21.3541 33.8414 21.3097 33.6196L20 27.071" stroke="#396999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M21.7677 11.1611H11.6789C11.5147 11.1611 11.3522 11.1935 11.2005 11.2563C11.0489 11.3191 10.9111 11.4112 10.795 11.5272L5.74161 16.5806C5.58162 16.7406 5.46806 16.941 5.41303 17.1605C5.358 17.3799 5.36356 17.6102 5.42912 17.8268C5.49469 18.0433 5.61779 18.238 5.78531 18.3901C5.95283 18.5421 6.15849 18.6459 6.38034 18.6903L12.9289 20" stroke="#396999" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="chance-flex-title">
+              <h3 class="chance-item-title class">Отправляй переводы за&nbsp;60&nbsp;секунд</h3>
+              <p class="chance-item-descr">
+                В&nbsp;комиссиях Swapster уже заложено щедрое вознаграждение майнерам, поэтому все ваши переводы будут доставлены максимально быстро. USDT ~ 1&nbsp;минута. BTC, ETH ~ 10&nbsp;минут.
+              </p>
+            </div>
+            </li>
+            <li class="chance-item flex">
+              <svg class="chance-svg-three all-svg" width="64" height="64" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M32.167 13.2V21.7833C32.167 26.9167 29.2337 29.1166 24.8337 29.1166H10.1837C9.43366 29.1166 8.717 29.05 8.05033 28.9C7.63367 28.8334 7.23368 28.7167 6.86701 28.5834C4.36701 27.65 2.85034 25.4833 2.85034 21.7833V13.2C2.85034 8.06664 5.78366 5.8667 10.1837 5.8667H24.8337C28.567 5.8667 31.2503 7.45002 31.967 11.0667C32.0837 11.7334 32.167 12.4166 32.167 13.2Z" stroke="#146053" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M37.1689 18.2002V26.7835C37.1689 31.9169 34.2356 34.1168 29.8356 34.1168H15.1856C13.9522 34.1168 12.8356 33.9502 11.8689 33.5836C9.88559 32.8502 8.53558 31.3336 8.05225 28.9002C8.71891 29.0502 9.43558 29.1168 10.1856 29.1168H24.8356C29.2356 29.1168 32.1689 26.9169 32.1689 21.7835V13.2002C32.1689 12.4168 32.1023 11.7169 31.9689 11.0669C35.1356 11.7336 37.1689 13.9668 37.1689 18.2002Z" stroke="#146053" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.4977 21.8999C19.9277 21.8999 21.8977 19.9299 21.8977 17.4999C21.8977 15.0698 19.9277 13.0999 17.4977 13.0999C15.0676 13.0999 13.0977 15.0698 13.0977 17.4999C13.0977 19.9299 15.0676 21.8999 17.4977 21.8999Z" stroke="#146053" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.96753 13.8335V21.1669" stroke="#146053" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M27.0366 13.8337V21.1671" stroke="#146053" stroke-width="2.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <div class="chance-flex-title">
+              <h3 class="chance-item-title class">Зарабатывай&nbsp;30% от&nbsp;обменов друзей</h3>
+              <p class="chance-item-descr">
+                Отправляйте друзьям свою реферальную ссылку и&nbsp;зарабатывайте на&nbsp;их&nbsp;обменах. За&nbsp;каждый совершённый другом обмен вы&nbsp;мгновенно получите&nbsp;30% прибыли от&nbsp;сделки.
+              </p>
+            </div>
+            </li>
+          </ul>
+        </div>
+        <div class="chance-bottom">
+          <h2 class="section-title chance-title">Преимущества Swapster</h2>
+          <div class="chance-bottom-container">
+            <div class="chance-bottom-container-text pc">
+              <ul class="list-reset chance-bottom-list">
+                <li class="chance-bottom-item flex">
+                  <svg class="chance-bot-svg" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M17 0C18.6569 0 20 1.34315 20 3V13C20 14.6569 18.6569 16 17 16H3C1.34315 16 0 14.6569 0 13V3C0 1.34315 1.34315 0 3 0H17ZM2 8V13C2 13.5523 2.44772 14 3 14H17C17.5523 14 18 13.5523 18 13V8H2ZM2 4H18V3C18 2.44772 17.5523 2 17 2H3C2.44772 2 2 2.44772 2 3V4Z" fill="#8AD4B8"/>
+                  </svg>
+                  <div>
+                    <button class="accordion btn-reset class">
+                        Автоматические выплаты на карты всех российских банков
+                        <svg id="circle3" class="svg-after" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.46967C8.51256 0.176777 8.98744 0.176777 9.28033 0.46967C9.57322 0.762563 9.57322 1.23744 9.28033 1.53033L5.53033 5.28033C5.23744 5.57322 4.76256 5.57322 4.46967 5.28033L0.71967 1.53033C0.426777 1.23744 0.426777 0.762563 0.71967 0.46967C1.01256 0.176777 1.48744 0.176777 1.78033 0.46967L5 3.68934L8.21967 0.46967Z" fill="white"/>
+                        </svg>
+                    </button>
+                    <div class="panel">
+                      <p class="panel-descr">Вам не нужно долго ждать вывода денег на карту в отличие от бирж и обменников – выплаты осуществляются мгновенно. Для удобства можно сохранить список актуальных карт и быстро к ним обратиться.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="chance-bottom-item flex">
+                  <svg class="chance-bot-svg spec-svg" width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 7C14 5.93913 13.5786 4.92172 12.8284 4.17157C12.0783 3.42143 11.0609 3 10 3V1C10 0.734784 9.89464 0.48043 9.70711 0.292893C9.51957 0.105357 9.26522 0 9 0C8.73478 0 8.48043 0.105357 8.29289 0.292893C8.10536 0.48043 8 0.734784 8 1V3H6V1C6 0.734784 5.89464 0.48043 5.70711 0.292893C5.51957 0.105357 5.26522 0 5 0C4.73478 0 4.48043 0.105357 4.29289 0.292893C4.10536 0.48043 4 0.734784 4 1V3H1C0.734784 3 0.48043 3.10536 0.292893 3.29289C0.105357 3.48043 0 3.73478 0 4C0 4.26522 0.105357 4.51957 0.292893 4.70711C0.48043 4.89464 0.734784 5 1 5H2V15H1C0.734784 15 0.48043 15.1054 0.292893 15.2929C0.105357 15.4804 0 15.7348 0 16C0 16.2652 0.105357 16.5196 0.292893 16.7071C0.48043 16.8946 0.734784 17 1 17H4V19C4 19.2652 4.10536 19.5196 4.29289 19.7071C4.48043 19.8946 4.73478 20 5 20C5.26522 20 5.51957 19.8946 5.70711 19.7071C5.89464 19.5196 6 19.2652 6 19V17H8V19C8 19.2652 8.10536 19.5196 8.29289 19.7071C8.48043 19.8946 8.73478 20 9 20C9.26522 20 9.51957 19.8946 9.70711 19.7071C9.89464 19.5196 10 19.2652 10 19V17C10.8103 16.9948 11.5999 16.7436 12.2643 16.2797C12.9287 15.8159 13.4365 15.1611 13.7205 14.4022C14.0046 13.6433 14.0514 12.8161 13.8549 12.03C13.6584 11.2438 13.2277 10.5359 12.62 10C13.0503 9.627 13.396 9.16642 13.634 8.64905C13.872 8.13169 13.9968 7.56947 14 7ZM10 15H4V11H10C10.5304 11 11.0391 11.2107 11.4142 11.5858C11.7893 11.9609 12 12.4696 12 13C12 13.5304 11.7893 14.0391 11.4142 14.4142C11.0391 14.7893 10.5304 15 10 15ZM10 9H4V5H10C10.5304 5 11.0391 5.21071 11.4142 5.58579C11.7893 5.96086 12 6.46957 12 7C12 7.53043 11.7893 8.03914 11.4142 8.41421C11.0391 8.78929 10.5304 9 10 9Z" fill="#8AD4B8"/>
+                  </svg>
+                  <div>
+                    <button class="accordion btn-reset class">
+                      Выгодный обмен криптовалюты без дополнительных комиссий
+                      <svg class="svg-after" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.46967C8.51256 0.176777 8.98744 0.176777 9.28033 0.46967C9.57322 0.762563 9.57322 1.23744 9.28033 1.53033L5.53033 5.28033C5.23744 5.57322 4.76256 5.57322 4.46967 5.28033L0.71967 1.53033C0.426777 1.23744 0.426777 0.762563 0.71967 0.46967C1.01256 0.176777 1.48744 0.176777 1.78033 0.46967L5 3.68934L8.21967 0.46967Z" fill="white"/>
+                      </svg>
+                    </button>
+                    <div class="panel">
+                      <p class="panel-descr">Вы не будете платить комиссии при конвертации криптовалют. Swapster фиксирует курс на 5 секунд и автоматически обновляет его в реальном времени – вы всегда знаете, сколько отдадите и получите.</p>
+                    </div>
+                  </div>
+                </li>
+                <!-- <li class="chance-bottom-item flex">
+                  <svg class="chance-bot-svg" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7071 0.792893L14.6129 0.709705C14.2206 0.40468 13.6534 0.432409 13.2929 0.792893L13.2097 0.887101C12.9047 1.27939 12.9324 1.84662 13.2929 2.20711L16.585 5.5H5L4.88338 5.50673C4.38604 5.56449 4 5.98716 4 6.5C4 7.05228 4.44772 7.5 5 7.5H19L19.1136 7.49402C19.9277 7.40718 20.3097 6.39547 19.7071 5.79289L14.7071 0.792893ZM16.002 10.5C16.002 9.94771 15.5543 9.5 15.002 9.5H1.002L0.888374 9.50598C0.0743371 9.59282 -0.307677 10.6045 0.294898 11.2071L5.2949 16.2071L5.38911 16.2903C5.7814 16.5953 6.34863 16.5676 6.70911 16.2071L6.7923 16.1129C7.09733 15.7206 7.0696 15.1534 6.70911 14.7929L3.417 11.5H15.002L15.1186 11.4933C15.616 11.4355 16.002 11.0128 16.002 10.5Z" fill="#8AD4B8"/>
+                  </svg>
+                  <div>
+                    <button class="accordion btn-reset class">
+                      Безопасно и без привязки личных данных
+                      <svg id="circle4" class="svg-after" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.46967C8.51256 0.176777 8.98744 0.176777 9.28033 0.46967C9.57322 0.762563 9.57322 1.23744 9.28033 1.53033L5.53033 5.28033C5.23744 5.57322 4.76256 5.57322 4.46967 5.28033L0.71967 1.53033C0.426777 1.23744 0.426777 0.762563 0.71967 0.46967C1.01256 0.176777 1.48744 0.176777 1.78033 0.46967L5 3.68934L8.21967 0.46967Z" fill="white"/>
+                      </svg>
+                    </button>
+                    <div class="panel">
+                      <p class="panel-descr">Мы не собираем и не передаём персональные данные пользователей. Вам доступны все функции бота без верификации личности. Безопасность ваших средств обеспечена безопасностью вашего Telegram-аккаунта.</p>
+                    </div>
+                  </div>
+                </li> -->
+                <li class="chance-bottom-item flex">
+                  <svg class="chance-bot-svg" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 4.05485e-05C9.46791 -0.00273137 7.95565 0.346579 6.57996 1.02101C5.20428 1.69544 4.00196 2.67696 3.0658 3.8898C2.12964 5.10264 1.48469 6.51438 1.18072 8.01604C0.87675 9.51769 0.921893 11.0691 1.31266 12.5506C1.70344 14.032 2.42938 15.4038 3.43448 16.5602C4.43957 17.7166 5.69693 18.6265 7.10951 19.2198C8.52208 19.8131 10.0521 20.0739 11.5815 19.982C13.1108 19.8902 14.5986 19.4481 15.93 18.69H16H16.05C17.9753 17.5941 19.4821 15.8898 20.334 13.8448C21.1858 11.7997 21.3345 9.52974 20.7566 7.39107C20.1788 5.25241 18.9071 3.36618 17.1412 2.02845C15.3754 0.690735 13.2153 -0.022735 11 4.05485e-05ZM12 2.07004C13.76 2.29323 15.3959 3.09514 16.6504 4.34963C17.9049 5.60412 18.7068 7.24002 18.93 9.00004H12V2.07004ZM11 18C8.97453 17.9862 7.02968 17.2046 5.55796 15.8129C4.08624 14.4212 3.19723 12.523 3.07033 10.5014C2.94342 8.47988 3.58808 6.48543 4.87421 4.9206C6.16033 3.35577 7.99216 2.33705 10 2.07004V10C10.004 10.1198 10.0276 10.238 10.07 10.35V10.43V10.5L14.07 17.37C13.0998 17.7853 12.0554 17.9996 11 18ZM15.83 16.36L12.73 11H18.93C18.7954 12.0546 18.4519 13.0718 17.9196 13.9921C17.3874 14.9124 16.677 15.7174 15.83 16.36Z" fill="#8AD4B8"/>
+                  </svg>
+                  <div>
+                    <button class="accordion btn-reset class">
+                      Общий баланс USDT для всех доступных сетей без комиссии
+                      <svg class="svg-after" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.46967C8.51256 0.176777 8.98744 0.176777 9.28033 0.46967C9.57322 0.762563 9.57322 1.23744 9.28033 1.53033L5.53033 5.28033C5.23744 5.57322 4.76256 5.57322 4.46967 5.28033L0.71967 1.53033C0.426777 1.23744 0.426777 0.762563 0.71967 0.46967C1.01256 0.176777 1.48744 0.176777 1.78033 0.46967L5 3.68934L8.21967 0.46967Z" fill="white"/>
+                      </svg>
+                    </button>
+                    <div class="panel">
+                      <p class="panel-descr">Отправляйте USDT по сетям TRC20, ERC20, BEP20 из одного общего баланса. Получили перевод TRC20 – можете отправить его в ERC20. Вам не придётся перекидывать средства со счёта на счёт и платить за это.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="chance-bottom-item flex">
+                  <svg class="chance-bot-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 16H1C0.734784 16 0.48043 16.1054 0.292893 16.2929C0.105357 16.4804 0 16.7348 0 17C0 17.2652 0.105357 17.5196 0.292893 17.7071C0.48043 17.8946 0.734784 18 1 18H21C21.2652 18 21.5196 17.8946 21.7071 17.7071C21.8946 17.5196 22 17.2652 22 17C22 16.7348 21.8946 16.4804 21.7071 16.2929C21.5196 16.1054 21.2652 16 21 16ZM21 20H1C0.734784 20 0.48043 20.1054 0.292893 20.2929C0.105357 20.4804 0 20.7348 0 21C0 21.2652 0.105357 21.5196 0.292893 21.7071C0.48043 21.8946 0.734784 22 1 22H21C21.2652 22 21.5196 21.8946 21.7071 21.7071C21.8946 21.5196 22 21.2652 22 21C22 20.7348 21.8946 20.4804 21.7071 20.2929C21.5196 20.1054 21.2652 20 21 20ZM5 6C4.80222 6 4.60888 6.05865 4.44443 6.16853C4.27998 6.27841 4.15181 6.43459 4.07612 6.61732C4.00043 6.80004 3.98063 7.00111 4.01921 7.19509C4.0578 7.38907 4.15304 7.56725 4.29289 7.70711C4.43275 7.84696 4.61093 7.9422 4.80491 7.98079C4.99889 8.01937 5.19996 7.99957 5.38268 7.92388C5.56541 7.84819 5.72159 7.72002 5.83147 7.55557C5.94135 7.39112 6 7.19778 6 7C6 6.73478 5.89464 6.48043 5.70711 6.29289C5.51957 6.10536 5.26522 6 5 6ZM19 0H3C2.20435 0 1.44129 0.31607 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3V11C0 11.7956 0.31607 12.5587 0.87868 13.1213C1.44129 13.6839 2.20435 14 3 14H19C19.7956 14 20.5587 13.6839 21.1213 13.1213C21.6839 12.5587 22 11.7956 22 11V3C22 2.20435 21.6839 1.44129 21.1213 0.87868C20.5587 0.31607 19.7956 0 19 0ZM20 11C20 11.2652 19.8946 11.5196 19.7071 11.7071C19.5196 11.8946 19.2652 12 19 12H3C2.73478 12 2.48043 11.8946 2.29289 11.7071C2.10536 11.5196 2 11.2652 2 11V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V11ZM11 4C10.4067 4 9.82664 4.17595 9.33329 4.50559C8.83994 4.83524 8.45542 5.30377 8.22836 5.85195C8.0013 6.40013 7.94189 7.00333 8.05764 7.58527C8.1734 8.16721 8.45912 8.70176 8.87868 9.12132C9.29824 9.54088 9.83279 9.8266 10.4147 9.94236C10.9967 10.0581 11.5999 9.9987 12.1481 9.77164C12.6962 9.54458 13.1648 9.16006 13.4944 8.66671C13.8241 8.17336 14 7.59334 14 7C14 6.20435 13.6839 5.44129 13.1213 4.87868C12.5587 4.31607 11.7956 4 11 4ZM11 8C10.8022 8 10.6089 7.94135 10.4444 7.83147C10.28 7.72159 10.1518 7.56541 10.0761 7.38268C10.0004 7.19996 9.98063 6.99889 10.0192 6.80491C10.0578 6.61093 10.153 6.43275 10.2929 6.29289C10.4327 6.15304 10.6109 6.0578 10.8049 6.01921C10.9989 5.98063 11.2 6.00043 11.3827 6.07612C11.5654 6.15181 11.7216 6.27998 11.8315 6.44443C11.9414 6.60888 12 6.80222 12 7C12 7.26522 11.8946 7.51957 11.7071 7.70711C11.5196 7.89464 11.2652 8 11 8ZM17 6C16.8022 6 16.6089 6.05865 16.4444 6.16853C16.28 6.27841 16.1518 6.43459 16.0761 6.61732C16.0004 6.80004 15.9806 7.00111 16.0192 7.19509C16.0578 7.38907 16.153 7.56725 16.2929 7.70711C16.4327 7.84696 16.6109 7.9422 16.8049 7.98079C16.9989 8.01937 17.2 7.99957 17.3827 7.92388C17.5654 7.84819 17.7216 7.72002 17.8315 7.55557C17.9414 7.39112 18 7.19778 18 7C18 6.73478 17.8946 6.48043 17.7071 6.29289C17.5196 6.10536 17.2652 6 17 6Z" fill="#8AD4B8"/>
+                  </svg>
+                  <div>
+                    <button class="accordion btn-reset class">
+                      Комиссии майнерам уже включены в комиссии Swapster
+                      <svg class="svg-after" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.46967C8.51256 0.176777 8.98744 0.176777 9.28033 0.46967C9.57322 0.762563 9.57322 1.23744 9.28033 1.53033L5.53033 5.28033C5.23744 5.57322 4.76256 5.57322 4.46967 5.28033L0.71967 1.53033C0.426777 1.23744 0.426777 0.762563 0.71967 0.46967C1.01256 0.176777 1.48744 0.176777 1.78033 0.46967L5 3.68934L8.21967 0.46967Z" fill="white"/>
+                      </svg>
+                    </button>
+                    <div class="panel">
+                      <p class="panel-descr">Вам не нужно покупать отдельно TRX и ETH для отправки USDT. Мы учли максимальную оплату майнерам, поэтому все транзакции осуществляются быстро.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="chance-bottom-item flex">
+                  <svg class="chance-bot-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.71 4.29L8.41 9.59L6.29 7.47C6.20035 7.36532 6.09003 7.2803 5.96597 7.22027C5.84191 7.16025 5.70677 7.12652 5.56905 7.1212C5.43133 7.11588 5.294 7.13909 5.16568 7.18936C5.03735 7.23964 4.9208 7.3159 4.82335 7.41335C4.72589 7.5108 4.64964 7.62735 4.59936 7.75568C4.54909 7.884 4.52588 8.02133 4.5312 8.15905C4.53652 8.29677 4.57025 8.43191 4.63027 8.55597C4.6903 8.68003 4.77532 8.79035 4.88 8.88L7.71 11.71C7.89626 11.8947 8.14766 11.9989 8.41 12C8.54161 12.0008 8.67207 11.9755 8.79391 11.9258C8.91574 11.876 9.02656 11.8027 9.12 11.71L15.12 5.71C15.2137 5.61704 15.2881 5.50644 15.3389 5.38458C15.3897 5.26272 15.4158 5.13201 15.4158 5C15.4158 4.86799 15.3897 4.73728 15.3389 4.61542C15.2881 4.49356 15.2137 4.38296 15.12 4.29C14.9326 4.10375 14.6792 3.99921 14.415 3.99921C14.1508 3.99921 13.8974 4.10375 13.71 4.29ZM17 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.316071 1.44129 0 2.20435 0 3V13C0 13.7956 0.316071 14.5587 0.87868 15.1213C1.44129 15.6839 2.20435 16 3 16H14.59L18.29 19.71C18.3834 19.8027 18.4943 19.876 18.6161 19.9258C18.7379 19.9755 18.8684 20.0008 19 20C19.1312 20.0034 19.2613 19.976 19.38 19.92C19.5626 19.845 19.7189 19.7176 19.8293 19.5539C19.9396 19.3901 19.999 19.1974 20 19V3C20 2.20435 19.6839 1.44129 19.1213 0.87868C18.5587 0.316071 17.7956 0 17 0ZM18 16.59L15.71 14.29C15.6166 14.1973 15.5057 14.124 15.3839 14.0742C15.2621 14.0245 15.1316 13.9992 15 14H3C2.73478 14 2.48043 13.8946 2.29289 13.7071C2.10536 13.5196 2 13.2652 2 13V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2H17C17.2652 2 17.5196 2.10536 17.7071 2.29289C17.8946 2.48043 18 2.73478 18 3V16.59Z" fill="#8AD4B8"/>
+                  </svg>
+                  <div>
+                    <button class="accordion btn-reset class">
+                      Круглосуточная клиентская поддержка
+                      <svg class="svg-after" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.46967C8.51256 0.176777 8.98744 0.176777 9.28033 0.46967C9.57322 0.762563 9.57322 1.23744 9.28033 1.53033L5.53033 5.28033C5.23744 5.57322 4.76256 5.57322 4.46967 5.28033L0.71967 1.53033C0.426777 1.23744 0.426777 0.762563 0.71967 0.46967C1.01256 0.176777 1.48744 0.176777 1.78033 0.46967L5 3.68934L8.21967 0.46967Z" fill="white"/>
+                      </svg>
+                    </button>
+                    <div class="panel">
+                      <p class="panel-descr">Наша команда операторов на связи 24/7. Вы можете обратиться с возникшей проблемой, за любой консультацией или просто поболтать.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="chance-bottom-item flex">
+                  <svg class="chance-bot-svg" width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13 9.5V10.5H14V9.5H13ZM5 9.5H4V10.5H5V9.5ZM10 13.5C10 12.9477 9.55229 12.5 9 12.5C8.44772 12.5 8 12.9477 8 13.5H10ZM8 15.5C8 16.0523 8.44772 16.5 9 16.5C9.55229 16.5 10 16.0523 10 15.5H8ZM3 10.5H15V8.5H3V10.5ZM16 11.5V17.5H18V11.5H16ZM15 18.5H3V20.5H15V18.5ZM2 17.5V11.5H0V17.5H2ZM3 18.5C2.44772 18.5 2 18.0523 2 17.5H0C0 19.1569 1.34315 20.5 3 20.5V18.5ZM16 17.5C16 18.0523 15.5523 18.5 15 18.5V20.5C16.6569 20.5 18 19.1569 18 17.5H16ZM15 10.5C15.5523 10.5 16 10.9477 16 11.5H18C18 9.84315 16.6569 8.5 15 8.5V10.5ZM3 8.5C1.34315 8.5 0 9.84315 0 11.5H2C2 10.9477 2.44772 10.5 3 10.5V8.5ZM12 5.5V9.5H14V5.5H12ZM13 8.5H5V10.5H13V8.5ZM6 9.5V5.5H4V9.5H6ZM9 2.5C10.6569 2.5 12 3.84315 12 5.5H14C14 2.73858 11.7614 0.5 9 0.5V2.5ZM9 0.5C6.23858 0.5 4 2.73858 4 5.5H6C6 3.84315 7.34315 2.5 9 2.5V0.5ZM8 13.5V15.5H10V13.5H8Z" fill="#8AD4B8"/>
+                  </svg>
+                  <div>
+                    <button class="accordion btn-reset class">
+                      Встроенная AML-проверка транзакций и кошельков
+                      <svg class="svg-after" width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.46967C8.51256 0.176777 8.98744 0.176777 9.28033 0.46967C9.57322 0.762563 9.57322 1.23744 9.28033 1.53033L5.53033 5.28033C5.23744 5.57322 4.76256 5.57322 4.46967 5.28033L0.71967 1.53033C0.426777 1.23744 0.426777 0.762563 0.71967 0.46967C1.01256 0.176777 1.48744 0.176777 1.78033 0.46967L5 3.68934L8.21967 0.46967Z" fill="white"/>
+                      </svg>
+                    </button>
+                    <div class="panel">
+                      <p class="panel-descr">Вы можете заранее проверить происхождение криптовалюты. Некоторые средства могут быть получены преступным путём – Swapster заботится о вашей безопасности.</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <button class="btn-reset btn glob-btn-start two-all-btn class"><a class="syk" href="https://t.me/SwapsterBot">Запустить Swapster</a></button>
+            </div>
+          </div>
+        </div>
+        <div class="chance-bottom-container-text mob">
+          <ul class="list-reset chance-bottom-list">
+            <li class="chance-bottom-item flex">
+              <svg class="chance-bot-svg" width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M17 0C18.6569 0 20 1.34315 20 3V13C20 14.6569 18.6569 16 17 16H3C1.34315 16 0 14.6569 0 13V3C0 1.34315 1.34315 0 3 0H17ZM2 8V13C2 13.5523 2.44772 14 3 14H17C17.5523 14 18 13.5523 18 13V8H2ZM2 4H18V3C18 2.44772 17.5523 2 17 2H3C2.44772 2 2 2.44772 2 3V4Z" fill="#8AD4B8"/>
+              </svg>
+              <div>
+                <button class="accordion btn-reset">
+                  Автоматические выплаты на карты всех российских банков
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.96967C8.51256 0.676777 8.98744 0.676777 9.28033 0.96967C9.57322 1.26256 9.57322 1.73744 9.28033 2.03033L5.53033 5.78033C5.23744 6.07322 4.76256 6.07322 4.46967 5.78033L0.71967 2.03033C0.426777 1.73744 0.426777 1.26256 0.71967 0.96967C1.01256 0.676777 1.48744 0.676777 1.78033 0.96967L5 4.18934L8.21967 0.96967Z" fill="#02313B"/>
+                  </svg>
+                </button>
+                <div class="panel">
+                  <p class="panel-descr">Вам не нужно долго ждать вывода денег на карту в отличие от бирж и обменников – выплаты осуществляются мгновенно. Для удобства можно сохранить список актуальных карт и быстро к ним обратиться.</p>
+                </div>
+              </div>
+            </li>
+            <li class="chance-bottom-item flex">
+              <svg class="chance-bot-svg spec-svg" width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 7C14 5.93913 13.5786 4.92172 12.8284 4.17157C12.0783 3.42143 11.0609 3 10 3V1C10 0.734784 9.89464 0.48043 9.70711 0.292893C9.51957 0.105357 9.26522 0 9 0C8.73478 0 8.48043 0.105357 8.29289 0.292893C8.10536 0.48043 8 0.734784 8 1V3H6V1C6 0.734784 5.89464 0.48043 5.70711 0.292893C5.51957 0.105357 5.26522 0 5 0C4.73478 0 4.48043 0.105357 4.29289 0.292893C4.10536 0.48043 4 0.734784 4 1V3H1C0.734784 3 0.48043 3.10536 0.292893 3.29289C0.105357 3.48043 0 3.73478 0 4C0 4.26522 0.105357 4.51957 0.292893 4.70711C0.48043 4.89464 0.734784 5 1 5H2V15H1C0.734784 15 0.48043 15.1054 0.292893 15.2929C0.105357 15.4804 0 15.7348 0 16C0 16.2652 0.105357 16.5196 0.292893 16.7071C0.48043 16.8946 0.734784 17 1 17H4V19C4 19.2652 4.10536 19.5196 4.29289 19.7071C4.48043 19.8946 4.73478 20 5 20C5.26522 20 5.51957 19.8946 5.70711 19.7071C5.89464 19.5196 6 19.2652 6 19V17H8V19C8 19.2652 8.10536 19.5196 8.29289 19.7071C8.48043 19.8946 8.73478 20 9 20C9.26522 20 9.51957 19.8946 9.70711 19.7071C9.89464 19.5196 10 19.2652 10 19V17C10.8103 16.9948 11.5999 16.7436 12.2643 16.2797C12.9287 15.8159 13.4365 15.1611 13.7205 14.4022C14.0046 13.6433 14.0514 12.8161 13.8549 12.03C13.6584 11.2438 13.2277 10.5359 12.62 10C13.0503 9.627 13.396 9.16642 13.634 8.64905C13.872 8.13169 13.9968 7.56947 14 7ZM10 15H4V11H10C10.5304 11 11.0391 11.2107 11.4142 11.5858C11.7893 11.9609 12 12.4696 12 13C12 13.5304 11.7893 14.0391 11.4142 14.4142C11.0391 14.7893 10.5304 15 10 15ZM10 9H4V5H10C10.5304 5 11.0391 5.21071 11.4142 5.58579C11.7893 5.96086 12 6.46957 12 7C12 7.53043 11.7893 8.03914 11.4142 8.41421C11.0391 8.78929 10.5304 9 10 9Z" fill="#8AD4B8"/>
+              </svg>
+              <div>
+                <button class="accordion btn-reset">
+                  Выгодный обмен криптовалюты без дополнительных комиссий
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.96967C8.51256 0.676777 8.98744 0.676777 9.28033 0.96967C9.57322 1.26256 9.57322 1.73744 9.28033 2.03033L5.53033 5.78033C5.23744 6.07322 4.76256 6.07322 4.46967 5.78033L0.71967 2.03033C0.426777 1.73744 0.426777 1.26256 0.71967 0.96967C1.01256 0.676777 1.48744 0.676777 1.78033 0.96967L5 4.18934L8.21967 0.96967Z" fill="#02313B"/>
+                  </svg>
+                </button>
+                <div class="panel">
+                  <p class="panel-descr">Вы не будете платить комиссии при конвертации криптовалют. Swapster фиксирует курс на 5 секунд и автоматически обновляет его в реальном времени – вы всегда знаете, сколько отдадите и получите.</p>
+                </div>
+              </div>
+            </li>
+            <!-- <li class="chance-bottom-item flex">
+              <svg class="chance-bot-svg" width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M14.7071 0.792893L14.6129 0.709705C14.2206 0.40468 13.6534 0.432409 13.2929 0.792893L13.2097 0.887101C12.9047 1.27939 12.9324 1.84662 13.2929 2.20711L16.585 5.5H5L4.88338 5.50673C4.38604 5.56449 4 5.98716 4 6.5C4 7.05228 4.44772 7.5 5 7.5H19L19.1136 7.49402C19.9277 7.40718 20.3097 6.39547 19.7071 5.79289L14.7071 0.792893ZM16.002 10.5C16.002 9.94771 15.5543 9.5 15.002 9.5H1.002L0.888374 9.50598C0.0743371 9.59282 -0.307677 10.6045 0.294898 11.2071L5.2949 16.2071L5.38911 16.2903C5.7814 16.5953 6.34863 16.5676 6.70911 16.2071L6.7923 16.1129C7.09733 15.7206 7.0696 15.1534 6.70911 14.7929L3.417 11.5H15.002L15.1186 11.4933C15.616 11.4355 16.002 11.0128 16.002 10.5Z" fill="#8AD4B8"/>
+              </svg>
+              <div>
+                <button class="accordion btn-reset">
+                  Безопасно и без привязки личных данных
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.96967C8.51256 0.676777 8.98744 0.676777 9.28033 0.96967C9.57322 1.26256 9.57322 1.73744 9.28033 2.03033L5.53033 5.78033C5.23744 6.07322 4.76256 6.07322 4.46967 5.78033L0.71967 2.03033C0.426777 1.73744 0.426777 1.26256 0.71967 0.96967C1.01256 0.676777 1.48744 0.676777 1.78033 0.96967L5 4.18934L8.21967 0.96967Z" fill="#02313B"/>
+                  </svg>
+                </button>
+                <div class="panel">
+                  <p class="panel-descr">Мы не собираем и не передаём персональные данные пользователей. Вам доступны все функции бота без верификации личности. Безопасность ваших средств обеспечена безопасностью вашего Telegram-аккаунта.</p>
+                </div>
+              </div>
+            </li> -->
+            <li class="chance-bottom-item flex">
+              <svg class="chance-bot-svg" width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 4.05485e-05C9.46791 -0.00273137 7.95565 0.346579 6.57996 1.02101C5.20428 1.69544 4.00196 2.67696 3.0658 3.8898C2.12964 5.10264 1.48469 6.51438 1.18072 8.01604C0.87675 9.51769 0.921893 11.0691 1.31266 12.5506C1.70344 14.032 2.42938 15.4038 3.43448 16.5602C4.43957 17.7166 5.69693 18.6265 7.10951 19.2198C8.52208 19.8131 10.0521 20.0739 11.5815 19.982C13.1108 19.8902 14.5986 19.4481 15.93 18.69H16H16.05C17.9753 17.5941 19.4821 15.8898 20.334 13.8448C21.1858 11.7997 21.3345 9.52974 20.7566 7.39107C20.1788 5.25241 18.9071 3.36618 17.1412 2.02845C15.3754 0.690735 13.2153 -0.022735 11 4.05485e-05ZM12 2.07004C13.76 2.29323 15.3959 3.09514 16.6504 4.34963C17.9049 5.60412 18.7068 7.24002 18.93 9.00004H12V2.07004ZM11 18C8.97453 17.9862 7.02968 17.2046 5.55796 15.8129C4.08624 14.4212 3.19723 12.523 3.07033 10.5014C2.94342 8.47988 3.58808 6.48543 4.87421 4.9206C6.16033 3.35577 7.99216 2.33705 10 2.07004V10C10.004 10.1198 10.0276 10.238 10.07 10.35V10.43V10.5L14.07 17.37C13.0998 17.7853 12.0554 17.9996 11 18ZM15.83 16.36L12.73 11H18.93C18.7954 12.0546 18.4519 13.0718 17.9196 13.9921C17.3874 14.9124 16.677 15.7174 15.83 16.36Z" fill="#8AD4B8"/>
+              </svg>
+              <div>
+                <button class="accordion btn-reset">
+                  Общий баланс USDT для всех доступных сетей без комиссии
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.96967C8.51256 0.676777 8.98744 0.676777 9.28033 0.96967C9.57322 1.26256 9.57322 1.73744 9.28033 2.03033L5.53033 5.78033C5.23744 6.07322 4.76256 6.07322 4.46967 5.78033L0.71967 2.03033C0.426777 1.73744 0.426777 1.26256 0.71967 0.96967C1.01256 0.676777 1.48744 0.676777 1.78033 0.96967L5 4.18934L8.21967 0.96967Z" fill="#02313B"/>
+                  </svg>
+                </button>
+                <div class="panel">
+                  <p class="panel-descr">Отправляйте USDT по сетям TRC20, ERC20, BEP20 из одного общего баланса. Получили перевод TRC20 – можете отправить его в ERC20. Вам не придётся перекидывать средства со счёта на счёт и платить за это.</p>
+                </div>
+              </div>
+            </li>
+            <li class="chance-bottom-item flex">
+              <svg class="chance-bot-svg" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M21 16H1C0.734784 16 0.48043 16.1054 0.292893 16.2929C0.105357 16.4804 0 16.7348 0 17C0 17.2652 0.105357 17.5196 0.292893 17.7071C0.48043 17.8946 0.734784 18 1 18H21C21.2652 18 21.5196 17.8946 21.7071 17.7071C21.8946 17.5196 22 17.2652 22 17C22 16.7348 21.8946 16.4804 21.7071 16.2929C21.5196 16.1054 21.2652 16 21 16ZM21 20H1C0.734784 20 0.48043 20.1054 0.292893 20.2929C0.105357 20.4804 0 20.7348 0 21C0 21.2652 0.105357 21.5196 0.292893 21.7071C0.48043 21.8946 0.734784 22 1 22H21C21.2652 22 21.5196 21.8946 21.7071 21.7071C21.8946 21.5196 22 21.2652 22 21C22 20.7348 21.8946 20.4804 21.7071 20.2929C21.5196 20.1054 21.2652 20 21 20ZM5 6C4.80222 6 4.60888 6.05865 4.44443 6.16853C4.27998 6.27841 4.15181 6.43459 4.07612 6.61732C4.00043 6.80004 3.98063 7.00111 4.01921 7.19509C4.0578 7.38907 4.15304 7.56725 4.29289 7.70711C4.43275 7.84696 4.61093 7.9422 4.80491 7.98079C4.99889 8.01937 5.19996 7.99957 5.38268 7.92388C5.56541 7.84819 5.72159 7.72002 5.83147 7.55557C5.94135 7.39112 6 7.19778 6 7C6 6.73478 5.89464 6.48043 5.70711 6.29289C5.51957 6.10536 5.26522 6 5 6ZM19 0H3C2.20435 0 1.44129 0.31607 0.87868 0.87868C0.31607 1.44129 0 2.20435 0 3V11C0 11.7956 0.31607 12.5587 0.87868 13.1213C1.44129 13.6839 2.20435 14 3 14H19C19.7956 14 20.5587 13.6839 21.1213 13.1213C21.6839 12.5587 22 11.7956 22 11V3C22 2.20435 21.6839 1.44129 21.1213 0.87868C20.5587 0.31607 19.7956 0 19 0ZM20 11C20 11.2652 19.8946 11.5196 19.7071 11.7071C19.5196 11.8946 19.2652 12 19 12H3C2.73478 12 2.48043 11.8946 2.29289 11.7071C2.10536 11.5196 2 11.2652 2 11V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2H19C19.2652 2 19.5196 2.10536 19.7071 2.29289C19.8946 2.48043 20 2.73478 20 3V11ZM11 4C10.4067 4 9.82664 4.17595 9.33329 4.50559C8.83994 4.83524 8.45542 5.30377 8.22836 5.85195C8.0013 6.40013 7.94189 7.00333 8.05764 7.58527C8.1734 8.16721 8.45912 8.70176 8.87868 9.12132C9.29824 9.54088 9.83279 9.8266 10.4147 9.94236C10.9967 10.0581 11.5999 9.9987 12.1481 9.77164C12.6962 9.54458 13.1648 9.16006 13.4944 8.66671C13.8241 8.17336 14 7.59334 14 7C14 6.20435 13.6839 5.44129 13.1213 4.87868C12.5587 4.31607 11.7956 4 11 4ZM11 8C10.8022 8 10.6089 7.94135 10.4444 7.83147C10.28 7.72159 10.1518 7.56541 10.0761 7.38268C10.0004 7.19996 9.98063 6.99889 10.0192 6.80491C10.0578 6.61093 10.153 6.43275 10.2929 6.29289C10.4327 6.15304 10.6109 6.0578 10.8049 6.01921C10.9989 5.98063 11.2 6.00043 11.3827 6.07612C11.5654 6.15181 11.7216 6.27998 11.8315 6.44443C11.9414 6.60888 12 6.80222 12 7C12 7.26522 11.8946 7.51957 11.7071 7.70711C11.5196 7.89464 11.2652 8 11 8ZM17 6C16.8022 6 16.6089 6.05865 16.4444 6.16853C16.28 6.27841 16.1518 6.43459 16.0761 6.61732C16.0004 6.80004 15.9806 7.00111 16.0192 7.19509C16.0578 7.38907 16.153 7.56725 16.2929 7.70711C16.4327 7.84696 16.6109 7.9422 16.8049 7.98079C16.9989 8.01937 17.2 7.99957 17.3827 7.92388C17.5654 7.84819 17.7216 7.72002 17.8315 7.55557C17.9414 7.39112 18 7.19778 18 7C18 6.73478 17.8946 6.48043 17.7071 6.29289C17.5196 6.10536 17.2652 6 17 6Z" fill="#8AD4B8"/>
+              </svg>
+              <div>
+                <button class="accordion btn-reset">
+                  Комиссии майнерам уже включены в комиссии Swapster
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.96967C8.51256 0.676777 8.98744 0.676777 9.28033 0.96967C9.57322 1.26256 9.57322 1.73744 9.28033 2.03033L5.53033 5.78033C5.23744 6.07322 4.76256 6.07322 4.46967 5.78033L0.71967 2.03033C0.426777 1.73744 0.426777 1.26256 0.71967 0.96967C1.01256 0.676777 1.48744 0.676777 1.78033 0.96967L5 4.18934L8.21967 0.96967Z" fill="#02313B"/>
+                  </svg>
+                </button>
+                <div class="panel">
+                  <p class="panel-descr">Вам не нужно покупать отдельно TRX и ETH для отправки USDT. Мы учли максимальную оплату майнерам, поэтому все транзакции осуществляются быстро.</p>
+                </div>
+              </div>
+            </li>
+            <li class="chance-bottom-item flex">
+              <svg class="chance-bot-svg" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13.71 4.29L8.41 9.59L6.29 7.47C6.20035 7.36532 6.09003 7.2803 5.96597 7.22027C5.84191 7.16025 5.70677 7.12652 5.56905 7.1212C5.43133 7.11588 5.294 7.13909 5.16568 7.18936C5.03735 7.23964 4.9208 7.3159 4.82335 7.41335C4.72589 7.5108 4.64964 7.62735 4.59936 7.75568C4.54909 7.884 4.52588 8.02133 4.5312 8.15905C4.53652 8.29677 4.57025 8.43191 4.63027 8.55597C4.6903 8.68003 4.77532 8.79035 4.88 8.88L7.71 11.71C7.89626 11.8947 8.14766 11.9989 8.41 12C8.54161 12.0008 8.67207 11.9755 8.79391 11.9258C8.91574 11.876 9.02656 11.8027 9.12 11.71L15.12 5.71C15.2137 5.61704 15.2881 5.50644 15.3389 5.38458C15.3897 5.26272 15.4158 5.13201 15.4158 5C15.4158 4.86799 15.3897 4.73728 15.3389 4.61542C15.2881 4.49356 15.2137 4.38296 15.12 4.29C14.9326 4.10375 14.6792 3.99921 14.415 3.99921C14.1508 3.99921 13.8974 4.10375 13.71 4.29ZM17 0H3C2.20435 0 1.44129 0.316071 0.87868 0.87868C0.316071 1.44129 0 2.20435 0 3V13C0 13.7956 0.316071 14.5587 0.87868 15.1213C1.44129 15.6839 2.20435 16 3 16H14.59L18.29 19.71C18.3834 19.8027 18.4943 19.876 18.6161 19.9258C18.7379 19.9755 18.8684 20.0008 19 20C19.1312 20.0034 19.2613 19.976 19.38 19.92C19.5626 19.845 19.7189 19.7176 19.8293 19.5539C19.9396 19.3901 19.999 19.1974 20 19V3C20 2.20435 19.6839 1.44129 19.1213 0.87868C18.5587 0.316071 17.7956 0 17 0ZM18 16.59L15.71 14.29C15.6166 14.1973 15.5057 14.124 15.3839 14.0742C15.2621 14.0245 15.1316 13.9992 15 14H3C2.73478 14 2.48043 13.8946 2.29289 13.7071C2.10536 13.5196 2 13.2652 2 13V3C2 2.73478 2.10536 2.48043 2.29289 2.29289C2.48043 2.10536 2.73478 2 3 2H17C17.2652 2 17.5196 2.10536 17.7071 2.29289C17.8946 2.48043 18 2.73478 18 3V16.59Z" fill="#8AD4B8"/>
+              </svg>
+              <div>
+                <button class="accordion btn-reset">
+                  Круглосуточная клиентская поддержка
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.96967C8.51256 0.676777 8.98744 0.676777 9.28033 0.96967C9.57322 1.26256 9.57322 1.73744 9.28033 2.03033L5.53033 5.78033C5.23744 6.07322 4.76256 6.07322 4.46967 5.78033L0.71967 2.03033C0.426777 1.73744 0.426777 1.26256 0.71967 0.96967C1.01256 0.676777 1.48744 0.676777 1.78033 0.96967L5 4.18934L8.21967 0.96967Z" fill="#02313B"/>
+                  </svg>
+                </button>
+                <div class="panel">
+                  <p class="panel-descr">Наша команда операторов на связи 24/7. Вы можете обратиться с возникшей проблемой, за любой консультацией или просто поболтать.</p>
+                </div>
+              </div>
+            </li>
+            <li class="chance-bottom-item flex">
+              <svg class="chance-bot-svg" width="18" height="21" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M13 9.5V10.5H14V9.5H13ZM5 9.5H4V10.5H5V9.5ZM10 13.5C10 12.9477 9.55229 12.5 9 12.5C8.44772 12.5 8 12.9477 8 13.5H10ZM8 15.5C8 16.0523 8.44772 16.5 9 16.5C9.55229 16.5 10 16.0523 10 15.5H8ZM3 10.5H15V8.5H3V10.5ZM16 11.5V17.5H18V11.5H16ZM15 18.5H3V20.5H15V18.5ZM2 17.5V11.5H0V17.5H2ZM3 18.5C2.44772 18.5 2 18.0523 2 17.5H0C0 19.1569 1.34315 20.5 3 20.5V18.5ZM16 17.5C16 18.0523 15.5523 18.5 15 18.5V20.5C16.6569 20.5 18 19.1569 18 17.5H16ZM15 10.5C15.5523 10.5 16 10.9477 16 11.5H18C18 9.84315 16.6569 8.5 15 8.5V10.5ZM3 8.5C1.34315 8.5 0 9.84315 0 11.5H2C2 10.9477 2.44772 10.5 3 10.5V8.5ZM12 5.5V9.5H14V5.5H12ZM13 8.5H5V10.5H13V8.5ZM6 9.5V5.5H4V9.5H6ZM9 2.5C10.6569 2.5 12 3.84315 12 5.5H14C14 2.73858 11.7614 0.5 9 0.5V2.5ZM9 0.5C6.23858 0.5 4 2.73858 4 5.5H6C6 3.84315 7.34315 2.5 9 2.5V0.5ZM8 13.5V15.5H10V13.5H8Z" fill="#8AD4B8"/>
+              </svg>
+              <div>
+                <button class="accordion btn-reset">
+                  Встроенная AML-проверка транзакций и кошельков
+                  <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.21967 0.96967C8.51256 0.676777 8.98744 0.676777 9.28033 0.96967C9.57322 1.26256 9.57322 1.73744 9.28033 2.03033L5.53033 5.78033C5.23744 6.07322 4.76256 6.07322 4.46967 5.78033L0.71967 2.03033C0.426777 1.73744 0.426777 1.26256 0.71967 0.96967C1.01256 0.676777 1.48744 0.676777 1.78033 0.96967L5 4.18934L8.21967 0.96967Z" fill="#02313B"/>
+                  </svg>
+                </button>
+                <div class="panel">
+                  <p class="panel-descr">Вы можете заранее проверить происхождение криптовалюты. Некоторые средства могут быть получены преступным путём – Swapster заботится о вашей безопасности.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <button class="btn-reset btn glob-btn-start two-all-btn"><a href="https://t.me/SwapsterBot">Запустить Swapster</a></button>
+        </div>
+      </div>
+    </section>
+
+    <section id="exchange" class="exchange">
+      <div class="container">
+        <div class="exchange-top">
+          <h2 class="section-title exchange-title pc">Рассчитай выгоду <br>и начни зарабатывать</h2>
+          <h2 class="section-title exchange-title mob">Рассчитай <br>выгоду и начни зарабатывать</h2>
+          <div class="change-container flex">
+            <div class="convert_block_item convert-block-left flex">
+              <select class="select-all" id="cur1">
+                <option>Bitcoin <span class="span-name">BTC</span></option>
+                <option>Ethereum <span class="span-name">ETH</span></option>
+                <option>BNB <span class="span-name">BNB</span></option>
+                <option>Tron <span class="span-name">TRX</span></option>
+                <option>Рубли <span class="span-name">RUB</span></option>
+                <option>Tether <span class="span-name">USDT</span></option>
+                <option>USD-Coin <span class="span-name">USDC</span></option>
+              </select>
+              <div class="container-convert-bot">
+                <span class="span-bot">Вы отдаете</span>
+                <input class="input-change" type="number" id="val" placeholder="0"/>
+              </div>
+            </div>
+            <div class="convert_block_item convert-block-right flex">
+              <select class="select-all" id="cur2">
+                <option>Bitcoin <span class="span-name">BTC</span></option>
+                <option>Ethereum <span class="span-name">ETH</span></option>
+                <option>BNB <span class="span-name">BNB</span></option>
+                <option>Tron <span class="span-name">TRX</span></option>
+                <option>Рубли <span class="span-name">RUB</span></option>
+                <option>Tether <span class="span-name">USDT</span></option>
+                <option>USD-Coin <span class="span-name">USDC</span></option>
+              </select>
+              <div class="container-convert-bot">
+                <span class="span-bot">Вы получаете</span>
+                <div class="convert_result input-change">0</div>
+              </div>
+            </div>
+          </div>
+          <p class="change-descr"><span class="change-descr-text">Цена AML-проверки: </span><span class="change-descr-price">0.003081</span></p>
+          <button class="btn-reset btn change-btn two-all-btn"><a href="https://t.me/SwapsterBot">Запустить Swapster</a></button>
+        </div>
+        <div id="rates" class="exchange-bottom">
+              <button class="accordion accordion-table btn btn-reset flex">
+                Наши тарифы
+              <svg id="tarif" width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6843 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="white"/>
+              </svg>
+              </button>
+            <div class="exchange-summary-descr panel">
+              <div class="inner-table">
+                <table class="table-btc">
+                  <tbody class="table-tbody">
+                    <tr class="table-tr">
+                      <th class="table-th spec-th btc-td-spec">Валюта</th>
+                      <th class="table-th">Минимальная <br>сумма пополнения</th>
+                      <th class="table-th">Комиссия <br>на пополнение</th>
+                      <th class="table-th">Минимальная <br>сумма вывода</th>
+                      <th class="table-th">Максимальная <br>сумма вывода</th>
+                      <th class="table-th">Комиссия <br>на вывод</th>
+                      <th class="table-th">Комиссия <br>на обмен</th>
+                      <th class="table-th">Цена <br>AML-проверки</th>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec"><img src="{% static 'img/11.jpg' %}" class="image-change" alt=""><div class="spec-td-flex"><span class="name-left">Bitcoin</span><span class="name-right">BTC</span></div></td>
+                      <td class="btc-all">0.00008367</td>
+                      <td class="btc-all">0</td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">0.00006972</td>
+                      <td class="btc-all">0.4%</td>
+                      <td class="btc-all">0.00003405</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec"><img src="{% static 'img/21.jpg' %}" class="image-change" alt=""><div class="spec-td-flex"><span class="name-left">Ethereum</span><span class="name-right">ETH</span></div></td>
+                      <td class="btc-all">0.00066485</td>
+                      <td class="btc-all">0</td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">0.00055404</td>
+                      <td class="btc-all">0.4%</td>
+                      <td class="btc-all">0.00050531</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec"><img src="{% static 'img/31.jpg' %}" class="image-change" alt=""><div class="spec-td-flex"><span class="name-left">BNB</span><span class="name-right">BNB</span></div></td>
+                      <td class="btc-all">0.000315</td>
+                      <td class="btc-all">0</td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">0.000263</td>
+                      <td class="btc-all">0.4%</td>
+                      <td class="btc-all">0.003081</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec"><img src="{% static 'img/41.jpg' %}" class="image-change" alt=""><div class="spec-td-flex"><span class="name-left">Tron</span><span class="name-right">TRX</span></div></td>
+                      <td class="btc-all">3</td>
+                      <td class="btc-all">0</td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">2.5</td>
+                      <td class="btc-all">0.4%</td>
+                      <td class="btc-all">12.85</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td colspan="8" class="btc-td-spec btc-tr-spec"><img src="{% static 'img/51.jpg' %}" class="image-change" alt=""><div class="spec-td-flex"><span class="name-left">Tether</span><span class="name-right">USDT</span></div></td>
+                      <td colspan="7" class="btc-all"><span class="visibility">.</span></td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec pod-td"><span class="name-left spec-name">ERC20</span></td>
+                      <td class="btc-all pod-td">50</td>
+                      <td class="btc-all pod-td">1.98 </td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">4.93</td>
+                      <td class="btc-all pod-td">0.4%</td>
+                      <td class="btc-all pod-td">1</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec pod-td"><span class="name-left spec-name">TRC20</span></td>
+                      <td class="btc-all pod-td">1</td>
+                      <td class="btc-all pod-td">0</td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">1.5</td>
+                      <td class="btc-all pod-td">0.4%</td>
+                      <td class="btc-all pod-td">1</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec pod-td"><span class="name-left spec-name">BEP20</span></td>
+                      <td class="btc-all pod-td">1</td>
+                      <td class="btc-all pod-td">0</td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">1</td>
+                      <td class="btc-all pod-td">0.4%</td>
+                      <td class="btc-all pod-td">1</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td colspan="8" class="btc-td-spec btc-tr-spec"><img src="{% static 'img/61.jpg' %}" class="image-change" alt=""><div class="spec-td-flex"><span class="name-left">USD Coin</span><span class="name-right">USDC</span></div></td>
+                      <td colspan="7" class="btc-all"><span class="visibility">.</span></td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec pod-td"><span class="name-left spec-name">ERC20</span></td>
+                      <td class="btc-all pod-td">50</td>
+                      <td class="btc-all pod-td">1.39</td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">3.47</td>
+                      <td class="btc-all pod-td">0.4%</td>
+                      <td class="btc-all pod-td">1</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec pod-td"><span class="name-left spec-name">TRC20</span></td>
+                      <td class="btc-all pod-td">1</td>
+                      <td class="btc-all pod-td">0</td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">0.00006972</td>
+                      <td class="btc-all pod-td">0.4%</td>
+                      <td class="btc-all pod-td">1</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec pod-td"><span class="name-left spec-name">BEP20</span></td>
+                      <td class="btc-all pod-td">1</td>
+                      <td class="btc-all pod-td">0</td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all pod-td">0.00006972</td>
+                      <td class="btc-all pod-td">0.4%</td>
+                      <td class="btc-all pod-td">1</td>
+                    </tr>
+                    <tr class="table-tr">
+                      <td class="btc-td-spec bot-td"><img src="{% static 'img/71.jpg' %}" class="image-change" alt=""><div class="spec-td-flex"><span class="name-left">Рубли</span><span class="name-right">RUB</span></div></td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">0</td>
+                      <td class="btc-all">1 000</td>
+                      <td class="btc-all">
+                        <svg width="14" height="2" viewBox="0 0 14 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13 1H1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                      </td>
+                      <td class="btc-all">0 + 3.3%</td>
+                      <td class="btc-all">0.4%</td>
+                      <td class="btc-all">63.5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="what-new" class="what-new">
+      <div class="container">
+        <h2 class="section-title what-new-title">Что нового</h2>
+        <div class="what-new-descr flex">
+          <div class="new-left">
+            <a href="#" class="new-left-text">
+              <div class="cont-hot-up">
+                <span class="hot-up">
+                  <svg class="hot-svg" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <rect width="28" height="28" fill="url(#pattern0)"/>
+                    <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                    <use xlink:href="#image0_235_1183" transform="scale(0.03125)"/>
+                    </pattern>
+                    <image id="image0_235_1183" width="32" height="32" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAB1FBMVEVHcEz5Ux/3TSf+awH6VBz8WBX8XxD7Zhf6Wxz/dwD/cQD7WxT8Ygv9cQ34UST8aBL/bwD+ZgX5VB7/aAL6WRj6Wxb9dQ/2Siv1RjD/fwD8YA//1XT/6Z3/qhz6Whf7XBP7Whf+bQH9ZQj8Zg37XBP3Tib9Ywv+cgH5VR79Zgj1RjD0RDP+ewD+cAT0RDP0RDP+iwD+kwD+kQH+8a3+mgb+oxT7YA/9Zwb9aAf3UCT8ZAr6XBX+bgD0RTL6Whj+cAH5VCD+cAH+bQH6WBn+iAH9Zwf8Ywz5VR7/iAD+ggD0QzX+igH//sr+rSj+lgD/+L7+7J7+kAD/3X3+mAD+kwL/cgD/egD/dQD/fwD/+sH/cAD/eQD/bgL/hQD/aAr/fAD/jgP/9qv/9Jj/awP/ggD/+Kf/85D/ZhH7Vxr/8n//9aH/73X/YBb/+H/8YQ//9rj/8of/VCb/YQ//igT+hhb+ZAX/Rzn/+LT/yUf/97D/01z/9of/8nr6RzH/0mj/lBP/62//9nv9XwX/uzv/miL/9LX/2W//32v/oRv/TDL/+JX9XBX/y1H/44///K7/kwf/qRX/oQn/+pf/53n/sj3/w0z+2mD/6Iv//7f/uUj/YB3/tiIpVvHmAAAAhnRSTlMA/v39BwPCAgH++v77GCgM/fyb//nmEZL/+sn+/PBhtx7XlXiSPEbG9Z76v9s/4Yb76G/9qdazh17Zr7LqoVzds32C8MDn0237W/FL/vqV/v5i+/Me/////////////////////////////////////////////////////////////////hqm9P0AAAJhSURBVDjLdZTld9pQGIdfmgQIxcLqsrpRW23u2mlnESIkGTBgQBlSKNSFuk06/Wd34ZylhZbnQ06S++S9v/eeewNwCsKGo6vBCOdjBOuzof5hK1LKGsOpVMpZS5QzjIAPLTjrUv04lJmFgNptZ51z+1a5EkiIVSAWusoYBrgb0+l0FTHHOYIhX8BaFQgEdLrYNfxsvrxC6MOViECg11IS0wiGLgKgxW+eRlTuVlnPCI5qHDrd5hmKWl2djle1FgsEPPnTAN1uCvNgM8nkqr/aVpLP2htugAYRE/kL68tJStSjosRpwRGOPx70iDztWY/8EE10O+BFASwPduOP+mg7SSeXI8e8SbgP0NpxKsHtsHkGM9GkwO6trByzpNCDQ5//IhD/hU6/GeNpkiGXQqGVLMOQbFubO15do7Vyw0+JaJwT1iKh+eWEjAweM4e1EqB3YzwryF5vNhIKRdYYjiHtGOV3nAgeO43GpcTm3Px8MLglcwJrp9wtWhfXRRPLcJKkbM4Fg8G5bwonszTm1mtdXKFNJMctHSf2dj4jvi56OYG2ey5rQjdPMl7u98HW0c7HPL7vjEya+HYtA36HQQkaf/1c/FDAty9xSLh6shAdXL2k7KfVg08FVHVJZtib2joYwTYgTSpNroyq+nw+VU3n1rl6+Z42A7oZlBKXGl9MRdOZTCYddeUO66UeomhDPFWUl6+jrqkCrsVJZcBStHEN8Hzky9rbprFcNDfW1Pjl8KEFiJIjYXn17u9sdmNjIzt7NDIKJeOF5/ej4xPNzc0T429qzjvAxvwr3GYr/AJOPv8H1VOW3PYTpYkAAAAASUVORK5CYII="/>
+                    </defs>
+                  </svg>
+                  <span class="hot-text class">Hot update</span>
+                </span>
+              </div>
+              <div>
+                <h3 class="new-left-title">Изменение комиссий на отправку Bitcoin BTC, Tether USDT и другие обновления.</h3>
+                <p class="new-left-time time">21 июня 2022</p>
+              </div>
+            </a>
+          </div>
+          <div class="new-right">
+            <div class="new-right-top">
+              <div class="new-right-top-text">
+                <a href="#" class="cont-text-top flex">
+                  <h3 class="new-right-title spec-title-rig">Продолжаем улучшать Swapster. Сегодня в обновлении:</h3>
+                  <ul class="list-reset new-right-list">
+                    <li class="new-right-item">✨  Перевод на IBAN</li>
+                    <li class="new-right-item">✨  Удобный выбор баланса для списания</li>
+                    <li class="new-right-item">✨  Эмодзи возле валют</li>
+                  </ul>
+                </a>
+                <p class="new-right-time time">16 мая 2022</p>
+              </div>
+            </div>
+            <div class="new-right-bot flex">
+              <div class="new-right-bot-left new-right-all-cont">
+                <div class="new-right-bot-left-text new-right-all">
+                  <a href="#" class="text-overflow">
+                    <h3 class="new-right-title">Изменение суточного лимита на вывод.</h3>
+                    <p class="new-right-descr">
+                      Чтобы противостоять возможности финансирования войны, завтра 28.02.2022 в 00:00 (GMT+2) мы уменьшим суточный лимит на вывод для не верифицированных пользователей. Если нового лимита не хватает — пройди верификацию. Кроме лимита, верификация увеличит безопасность аккаунта, сможешь пополнять картой. ✊ Если остались вопросы — напиши в поддержку: <a href="#">@SwapsterSupport</a>
+                    </p>
+                  </a>
+                  <p class="new-right-time time">4 марта 2022</p>
+                </div>
+              </div>
+              <div class="new-right-bot-right new-right-all-cont">
+                <div class="new-right-bot-right-text new-right-all">
+                  <a href="#" class="text-overflow">
+                    <h3 class="new-right-title">💪 Друзья, Swapster продолжает стабильную работу.</h3>
+                    <p class="new-right-spec">
+                      Вся инфраструктура находиться в облачных сервисах и защищена по высшим стандартам. Поэтому ваши средства и данные в безопасности.
+・ Получение платежей и вывод стабильно работает через все доступные платёжные системы.
+・ Служба поддержки работает в штатном режиме.
+                    </p>
+                  </a>
+                  <p class="new-right-time time">30 декабря 2021</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <div class="container">
+        <div class="container-faq">
+          <h2 class="section-title faq-title">Часто задаваемые вопросы</h2>
+          <details class="faq-details">
+            <summary class="faq-summary first-faq-summary">
+              Что умеет этот бот?
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+              </svg>
+            </summary>
+            <p class="faq-summary-descr">
+              Swapster – криптовалютный бот с функциями хранения и обмена. Вы можете принимать, отправлять, конвертировать криптовалюту. Также, обменивать криптовалюту на рубли и выплачивать на карты российских банков.
+            </p>
+          </details>
+          <details class="faq-details">
+            <summary class="faq-summary">
+              Чем Swapster лучше биржи?
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+              </svg>
+            </summary>
+            <p class="faq-summary-descr">
+              Бот работает внутри Telegram, вам не нужно устанавливать дополнительные приложения и регистрироваться в них. Все функции доступны сразу же после запуска бота.
+            </p>
+          </details>
+          <details class="faq-details">
+            <summary class="faq-summary">
+              Как я могу заработать в Swapster?
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+              </svg>
+            </summary>
+            <p class="faq-summary-descr">
+              Помимо торговли криптовалютой, вы можете приглашать друзей по своей реферальной ссылке. Друг меняется – вы получаете 30% прибыли от совершенной им сделки.
+            </p>
+          </details>
+          <details class="faq-details">
+            <summary class="faq-summary">
+              Как обменять криптовалюту на рубли?
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+              </svg>
+            </summary>
+            <p class="faq-summary-descr">
+              У вас есть баланс криптовалют и рублёвый баланс. Вы можете пополнять его, продавая криптовалюту. Также возможно вывести криптовалюту сразу на карту без пополнения рублёвого баланса. Выплаты автоматические и обрабатываются мгновенно.
+            </p>
+          </details>
+          <details class="faq-details">
+            <summary class="faq-summary">
+              Какие криптовалюты поддерживает бот?
+              <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+              </svg>
+            </summary>
+            <p class="faq-summary-descr">
+              На данный момент вам доступны кошельки под самые популярные токены: BTC, ETH, USDT, USDC, BNB, TRX. Список будет дополняться со временем.
+            </p>
+          </details>
+          <div class="hidden">
+            <details class="faq-details">
+              <summary class="faq-summary">
+                Как пополнить баланс криптовалют?
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+                </svg>
+              </summary>
+              <p class="faq-summary-descr">
+                В главном меню нажмите «Пополнить» и выберите нужную валюту. Бот предоставит вам адрес для пополнения, также можно сгенерировать QR-код кошелька. Сообщите адрес или QR-код отправителю и ожидайте подтверждение транзакции.
+              </p>
+            </details>
+          </div>
+          <div class="hidden">
+            <details class="faq-details">
+              <summary class="faq-summary">
+                Как отправить криптовалюту другому человеку?
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+                </svg>
+              </summary>
+              <p class="faq-summary-descr">
+                В главном меню нажмите «Отправить», выберите нужную криптовалюту, сеть и введите адрес кошелька получателя. Кстати, Swapster не берет комиссию за переводы внутри системы.
+              </p>
+            </details>
+          </div>
+          <div class="hidden">
+            <details class="faq-details">
+              <summary class="faq-summary">
+                Как долго обрабатываются транзакции?
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+                </svg>
+              </summary>
+              <p class="faq-summary-descr">
+                В комиссии Swapster учтена оплата майнерам, поэтому транзакции обрабатываются быстро. USDT ~ 1 минута, BTC, ETH ~ 10 минут.
+              </p>
+            </details>
+          </div>
+          <div class="hidden">
+            <details class="faq-details">
+              <summary class="faq-summary">
+                Могу ли я пополнить счет USDT в TRC20, а вывести в ERC20?
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+                </svg>
+              </summary>
+              <p class="faq-summary-descr">
+                У Swapster единый баланс для USDT. А это значит, что вы можете принимать USDT по любой доступной сети и так же её отправлять.
+              </p>
+            </details>
+          </div>
+          <div class="hidden">
+            <details class="faq-details">
+              <summary class="faq-summary">
+                Транзакция долго не подтверждается. Что делать?
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+                </svg>
+              </summary>
+              <p class="faq-summary-descr">
+                Обычно транзакции Swapster обрабатываются сразу, но иногда сеть может быть перегружена. Уточнить о статусе операции вы можете у круглосуточной техподдержки: <a class="link-site" target="_blank" href="https://t.me/SwapsterSupport">https://t.me/SwapsterSupport</a>
+              </p>
+            </details>
+          </div>
+          <div class="hidden">
+            <details class="faq-details last-ch">
+              <summary class="faq-summary">
+                Для чего мне нужна платная AML-проверка?
+                <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path class="faq-svg-spec" fill-rule="evenodd" clip-rule="evenodd" d="M13.7072 1.70725L7.70725 7.70725C7.31625 8.09825 6.68425 8.09825 6.29325 7.70725L0.29325 1.70725C-0.09775 1.31625 -0.09775 0.68425 0.29325 0.29325C0.68425 -0.09775 1.31625 -0.09775 1.70725 0.29325L7.00025 5.58625L12.2933 0.29325C12.6842 -0.09775 13.3162 -0.09775 13.7072 0.29325C13.9022 0.48825 14.0002 0.74425 14.0002 1.00025C14.0002 1.25625 13.9022 1.51225 13.7072 1.70725Z" fill="none"/>
+                </svg>
+              </summary>
+              <p class="faq-summary-descr">
+                Проверка AML помогает узнать происхождение криптовалюты заранее. Например, средства могут быть получены преступным путём – вымоганием или обманом. Владение такими может привести к уголовной ответственности.
+              </p>
+            </details>
+          </div>
+          <button class="btn-reset more">Показать еще 6 вопросов</button>
+          <p class="faq-descr">
+            <svg class="faq-svg" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 10V13C22 17 20 19 16 19H15.5C15.19 19 14.89 19.15 14.7 19.4L13.2 21.4C12.54 22.28 11.46 22.28 10.8 21.4L9.3 19.4C9.14 19.18 8.77 19 8.5 19H8C4 19 2 18 2 13V8C2 4 4 2 8 2H14" stroke="#02313B" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M19.5 7C20.8807 7 22 5.88071 22 4.5C22 3.11929 20.8807 2 19.5 2C18.1193 2 17 3.11929 17 4.5C17 5.88071 18.1193 7 19.5 7Z" stroke="#1673F0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15.9965 11H16.0054" stroke="#02313B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.9955 11H12.0045" stroke="#02313B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7.99451 11H8.00349" stroke="#02313B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+              <span class="faq-one class">Остались вопросы? </span><span class="faq-two class">Напишите нам в круглосуточную поддержку </span><a class="faq-three class" target="_blank" href="https://t.me/SwapsterSupport">@SwapsterSupport</a>
+          </p>
+        </div>
+        <div class="slider">
+          <div class="reviews-container-top">
+            <div class="block-div">
+              <h2 class="section-title reviews-title">Отзывы</h2>
+              <div class="slider-control">
+                <div id="sl-prev" class="sl-btn">
+                  <svg class="spec-dla-svg" width="12" height="12" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path id="circle1" d="M11 5.99994H3.40999L6.70999 2.70994C6.89829 2.52164 7.00408 2.26624 7.00408 1.99994C7.00408 1.73364 6.89829 1.47825 6.70999 1.28994C6.52168 1.10164 6.26629 0.99585 5.99999 0.99585C5.73369 0.99585 5.47829 1.10164 5.28999 1.28994L0.289988 6.28994C0.198947 6.38505 0.127582 6.49719 0.0799879 6.61994C-0.0200301 6.8634 -0.0200301 7.13648 0.0799879 7.37994C0.127582 7.50269 0.198947 7.61484 0.289988 7.70994L5.28999 12.7099C5.38295 12.8037 5.49355 12.8781 5.61541 12.9288C5.73727 12.9796 5.86798 13.0057 5.99999 13.0057C6.132 13.0057 6.26271 12.9796 6.38456 12.9288C6.50642 12.8781 6.61702 12.8037 6.70999 12.7099C6.80372 12.617 6.87811 12.5064 6.92888 12.3845C6.97965 12.2627 7.00579 12.132 7.00579 11.9999C7.00579 11.8679 6.97965 11.7372 6.92888 11.6154C6.87811 11.4935 6.80372 11.3829 6.70999 11.2899L3.40999 7.99994H11C11.2652 7.99994 11.5196 7.89458 11.7071 7.70705C11.8946 7.51951 12 7.26516 12 6.99994C12 6.73472 11.8946 6.48037 11.7071 6.29283C11.5196 6.1053 11.2652 5.99994 11 5.99994Z" fill="#BABCBF"/>
+                  </svg>
+                </div>
+                <div id="sl-next" class="sl-btn" onclick="circle1.style.fill='#02313B';">
+                  <svg class="spec-dla-svg" width="12" height="12" viewBox="0 0 12 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path class="fill-svg" d="M1.00001 5.99994H8.59001L5.29001 2.70994C5.10171 2.52164 4.99592 2.26624 4.99592 1.99994C4.99592 1.73364 5.10171 1.47825 5.29001 1.28994C5.47832 1.10164 5.73371 0.99585 6.00001 0.99585C6.26631 0.99585 6.52171 1.10164 6.71001 1.28994L11.71 6.28994C11.8011 6.38505 11.8724 6.49719 11.92 6.61994C12.02 6.8634 12.02 7.13648 11.92 7.37994C11.8724 7.50269 11.8011 7.61484 11.71 7.70994L6.71001 12.7099C6.61705 12.8037 6.50645 12.8781 6.38459 12.9288C6.26273 12.9796 6.13202 13.0057 6.00001 13.0057C5.868 13.0057 5.73729 12.9796 5.61544 12.9288C5.49358 12.8781 5.38297 12.8037 5.29001 12.7099C5.19628 12.617 5.12189 12.5064 5.07112 12.3845C5.02035 12.2627 4.99421 12.132 4.99421 11.9999C4.99421 11.8679 5.02035 11.7372 5.07112 11.6154C5.12189 11.4935 5.19628 11.3829 5.29001 11.2899L8.59001 7.99994H1.00001C0.734796 7.99994 0.480441 7.89458 0.292905 7.70705C0.105368 7.51951 1.23978e-05 7.26516 1.23978e-05 6.99994C1.23978e-05 6.73472 0.105368 6.48037 0.292905 6.29283C0.480441 6.1053 0.734796 5.99994 1.00001 5.99994Z" fill="#02313B"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <div class="slider-win">
+              <div class="slider-item">
+                <div class="inner">
+                <div class="cont-image-info flex">
+                  <img class="image-name" src="{% static 'img/20aleks1.jpg' %}" alt="">
+                  <div class="cont-rev-name flex">
+                    <div class="cont-rev">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                    </div>
+                    <span class="name-rev">Алексей</span>
+                  </div>
+                </div>
+                <p class="inner-descr">
+                  Курс лучший на покупку битков через сбербанк. Я мониторю каждый день несколько р2р-площадок и здесь практически всегда трейдеры стоят с лучшим курсом
+                </p>
+              </div>
+            </div>
+              <div class="slider-item">
+                <div class="inner">
+                  <div class="cont-image-info flex">
+                    <img class="image-name" src="{% static 'img/20ivan1.jpg' %}" alt="">
+                    <div class="cont-rev-name flex">
+                      <div class="cont-rev">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                      </div>
+                      <span class="name-rev">Иван</span>
+                    </div>
+                  </div>
+                  <p class="inner-descr">
+                    Модераторы работают как молния) банят мошенников просто моментально. А они потом обиженные бегут писать плохие отзывы)) В общем Swapster мой любимый обменник и кошелек для сделок с криптой.
+                  </p>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="inner">
+                  <div class="cont-image-info flex">
+                    <!-- <img class="image-name" src="img/20aleks.jpg" alt=""> -->
+                    <span class="vmesto-image" id="background">М</span>
+                    <div class="cont-rev-name flex">
+                      <div class="cont-rev">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                      </div>
+                      <span class="name-rev">Marat</span>
+                    </div>
+                  </div>
+                  <p class="inner-descr">
+                    Главным преимуществом выделил скорость работы бота и платформу, в которой он развёрнут. Большинство устраивает курс на своп, бесплатные транзы внутри системы, мгновенная партрёрка. В общем: скорость, скорость, скорость, юзабилити.
+                  </p>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="inner">
+                <div class="cont-image-info flex">
+                  <img class="image-name" src="{% static 'img/20aleks1.jpg' %}" alt="">
+                  <div class="cont-rev-name flex">
+                    <div class="cont-rev">
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                      </svg>
+                    </div>
+                    <span class="name-rev">Алексей</span>
+                  </div>
+                </div>
+                <p class="inner-descr">
+                  Курс лучший на покупку битков через сбербанк. Я мониторю каждый день несколько р2р-площадок и здесь практически всегда трейдеры стоят с лучшим курсом
+                </p>
+              </div>
+            </div>
+              <div class="slider-item">
+                <div class="inner">
+                  <div class="cont-image-info flex">
+                    <img class="image-name" src="{% static 'img/20ivan1.jpg' %}" alt="">
+                    <div class="cont-rev-name flex">
+                      <div class="cont-rev">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                      </div>
+                      <span class="name-rev">Иван</span>
+                    </div>
+                  </div>
+                  <p class="inner-descr">
+                    Модераторы работают как молния) банят мошенников просто моментально. А они потом обиженные бегут писать плохие отзывы)) В общем Swapster мой любимый обменник и кошелек для сделок с криптой.
+                  </p>
+                </div>
+              </div>
+              <div class="slider-item">
+                <div class="inner">
+                  <div class="cont-image-info flex">
+                    <!-- <img class="image-name" src="img/20aleks.jpg" alt=""> -->
+                    <span class="vmesto-image" id="background">М</span>
+                    <div class="cont-rev-name flex">
+                      <div class="cont-rev">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M6.32745 1.36274C6.60256 0.805304 7.39744 0.805305 7.67255 1.36274L9.17664 4.41035C9.28588 4.63171 9.49706 4.78514 9.74134 4.82063L13.1046 5.30934C13.7197 5.39873 13.9654 6.15471 13.5202 6.58861L11.0866 8.96084C10.9098 9.13315 10.8292 9.3814 10.8709 9.62469L11.4454 12.9743C11.5505 13.587 10.9074 14.0542 10.3572 13.765L7.349 12.1835C7.13051 12.0686 6.86949 12.0686 6.65099 12.1835L3.64282 13.765C3.0926 14.0542 2.44953 13.587 2.55461 12.9743L3.12912 9.62469C3.17085 9.3814 3.09019 9.13315 2.91342 8.96084L0.479759 6.58861C0.0346211 6.15471 0.280255 5.39873 0.89542 5.30934L4.25866 4.82063C4.50294 4.78514 4.71412 4.63171 4.82336 4.41035L6.32745 1.36274Z" fill="#EA7F4A"/>
+                        </svg>
+                      </div>
+                      <span class="name-rev">Marat</span>
+                    </div>
+                  </div>
+                  <p class="inner-descr">
+                    Главным преимуществом выделил скорость работы бота и платформу, в которой он развёрнут. Большинство устраивает курс на своп, бесплатные транзы внутри системы, мгновенная партрёрка. В общем: скорость, скорость, скорость, юзабилити.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+            <div class="container-start-swapster">
+              <div class="container-start-swapster-text flex">
+                <h2 class="section-title start-swapster-title">Запустить Swapster <br>и создать все доступные кошельки в 1 клик</h2>
+                <a href="https://t.me/SwapsterBot" class="btn-reset btn start-swapster-btn two-all-btn">Запустить Swapster</a>
+              </div>
+            </div>
+            </div>
+      </section>
+
+      <section id="contacts" class="contacts pc">
+        <div class="container">
+          <div class="container-contacts flex">
+            <div class="container-contacts-one">
+              <img class="image-contacts" src="{% static 'img/logo1.svg' %}" alt="">
+              <p class="logo-descr">Надёжное хранилище криптовалют. Выгодный обмен и моментальный вывод на карты всех российских банков.</p>
+            </div>
+            <div class="container-contacts-two">
+              <ul class="list-reset contacts-list">
+                <li class="contacts-list-item">
+                  <a href="#chance" class="contacts-link">Возможности</a>
+                </li>
+                <li class="contacts-list-item">
+                  <a href="#exchange" class="contacts-link">Обмен</a>
+                </li>
+                <li class="contacts-list-item">
+                  <a href="#what-new" class="contacts-link">Что нового</a>
+                </li>
+                <li class="contacts-list-item">
+                  <a href="#faq" class="contacts-link">FAQ</a>
+                </li>
+              </ul>
+            </div>
+            <div class="container-contacts-three">
+              <ul class="list-reset contacts-list-two">
+                <li class="contacts-list-two-item flex">
+                  <span class="contacts-item-descr">Круглосуточная поддержка</span>
+                  <a class="contacts-link-two" href="https://t.me/SwapsterSupport">@SwapsterSupport</a>
+                </li>
+                <li class="contacts-list-two-item flex">
+                  <span class="contacts-item-descr">Телеграм-бот</span>
+                  <a class="contacts-link-two" href="https://t.me/SwapsterBot">@SwapsterBot</a>
+                </li>
+                <li class="contacts-list-two-item flex">
+                  <span class="contacts-item-descr">Email</span>
+                  <a class="contacts-link-two" href="mailto:info@swapster.fi">info@swapster.fi</a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <a class="svg-footer" href="#">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="23.5" stroke="#8AD4B8"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M25.344 32H22.1333V24.0045H20V21.2384H22.1333V19.6199C22.1333 17.3697 22.7849 16 25.6187 16H27.9778V18.7572H26.5049C25.4009 18.7572 25.3493 19.1396 25.3493 19.86V21.2384H28L27.6871 23.9955L25.3502 24.0045L25.344 32Z" fill="white"/>
+                </svg>
+              </a>
+              <a class="svg-footer" href="#">
+                <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="24" cy="24" r="23.5" stroke="#8AD4B8"/>
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M32 18.6624C31.407 18.9476 30.77 19.134 30.115 19.2138C30.8154 18.752 31.3269 18.0606 31.5583 17.2625C30.9221 17.6702 30.2159 17.9608 29.4742 18.12C29.1802 17.7737 28.8135 17.4941 28.3992 17.3008C27.985 17.1074 27.533 17.0048 27.0746 17C26.1639 17.0422 25.3073 17.4379 24.6922 18.1004C24.0771 18.7629 23.7536 19.6383 23.7925 20.535C23.7915 20.8056 23.8198 21.0754 23.8769 21.34C22.5426 21.2538 21.2442 20.878 20.0747 20.2396C18.9053 19.6012 17.8938 18.716 17.1127 17.6475C16.8187 18.1947 16.6661 18.8047 16.6683 19.4238C16.6605 19.9935 16.7886 20.557 17.0422 21.0691C17.2958 21.5812 17.6679 22.0276 18.1285 22.3724C17.6033 22.3471 17.0927 22.1939 16.6426 21.9264C16.6426 21.9439 16.6426 21.9524 16.6426 21.9699C16.6176 22.7559 16.8646 23.5268 17.343 24.1564C17.8215 24.7859 18.503 25.2367 19.2759 25.4349C18.995 25.5158 18.7038 25.5571 18.4112 25.5575C18.2036 25.5594 17.9965 25.5388 17.7935 25.4962C17.9742 26.173 18.3684 26.7757 18.9195 27.2176C19.4706 27.6595 20.1499 27.9178 20.8596 27.955C19.7293 28.9243 18.2828 29.4615 16.7839 29.4688C16.5217 29.469 16.2598 29.4514 16 29.4162C17.4715 30.4413 19.2285 30.9945 21.0312 31C27.0684 31 30.3692 25.6188 30.3692 20.9463C30.3692 20.7975 30.3692 20.64 30.3603 20.4912C31.0121 19.9816 31.5672 19.3624 32 18.6624Z" fill="white"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="contacts mob">
+        <div class="container">
+          <div class="container-contacts flex">
+            <div class="container-contacts-one flex">
+              <img class="mob-image" src="{% static 'img/logo1.svg' %}" alt="">
+              <div>
+                <a class="svg-footer" href="#">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="23.5" stroke="#8AD4B8"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M25.344 32H22.1333V24.0045H20V21.2384H22.1333V19.6199C22.1333 17.3697 22.7849 16 25.6187 16H27.9778V18.7572H26.5049C25.4009 18.7572 25.3493 19.1396 25.3493 19.86V21.2384H28L27.6871 23.9955L25.3502 24.0045L25.344 32Z" fill="white"/>
+                  </svg>
+                </a>
+                <a class="svg-footer" href="#">
+                  <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="23.5" stroke="#8AD4B8"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32 18.6624C31.407 18.9476 30.77 19.134 30.115 19.2138C30.8154 18.752 31.3269 18.0606 31.5583 17.2625C30.9221 17.6702 30.2159 17.9608 29.4742 18.12C29.1802 17.7737 28.8135 17.4941 28.3992 17.3008C27.985 17.1074 27.533 17.0048 27.0746 17C26.1639 17.0422 25.3073 17.4379 24.6922 18.1004C24.0771 18.7629 23.7536 19.6383 23.7925 20.535C23.7915 20.8056 23.8198 21.0754 23.8769 21.34C22.5426 21.2538 21.2442 20.878 20.0747 20.2396C18.9053 19.6012 17.8938 18.716 17.1127 17.6475C16.8187 18.1947 16.6661 18.8047 16.6683 19.4238C16.6605 19.9935 16.7886 20.557 17.0422 21.0691C17.2958 21.5812 17.6679 22.0276 18.1285 22.3724C17.6033 22.3471 17.0927 22.1939 16.6426 21.9264C16.6426 21.9439 16.6426 21.9524 16.6426 21.9699C16.6176 22.7559 16.8646 23.5268 17.343 24.1564C17.8215 24.7859 18.503 25.2367 19.2759 25.4349C18.995 25.5158 18.7038 25.5571 18.4112 25.5575C18.2036 25.5594 17.9965 25.5388 17.7935 25.4962C17.9742 26.173 18.3684 26.7757 18.9195 27.2176C19.4706 27.6595 20.1499 27.9178 20.8596 27.955C19.7293 28.9243 18.2828 29.4615 16.7839 29.4688C16.5217 29.469 16.2598 29.4514 16 29.4162C17.4715 30.4413 19.2285 30.9945 21.0312 31C27.0684 31 30.3692 25.6188 30.3692 20.9463C30.3692 20.7975 30.3692 20.64 30.3603 20.4912C31.0121 19.9816 31.5672 19.3624 32 18.6624Z" fill="white"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="two-cont flex">
+              <div class="container-contacts-two">
+                <ul class="list-reset contacts-list">
+                  <li class="contacts-list-item">
+                    <a href="#chance" class="contacts-link">Возможности</a>
+                  </li>
+                  <li class="contacts-list-item">
+                    <a href="#exchange" class="contacts-link">Обмен</a>
+                  </li>
+                  <li class="contacts-list-item">
+                    <a href="#what-new" class="contacts-link">Что нового</a>
+                  </li>
+                  <li class="contacts-list-item">
+                    <a href="#faq" class="contacts-link">FAQ</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="container-contacts-three">
+                <ul class="list-reset contacts-list-two">
+                  <li class="contacts-list-two-item flex">
+                    <span class="contacts-item-descr">Круглосуточная поддержка</span>
+                    <a class="contacts-link-two" href="https://t.me/SwapsterSupport">@SwapsterSupport</a>
+                  </li>
+                  <li class="contacts-list-two-item flex">
+                    <span class="contacts-item-descr">Телеграм-бот</span>
+                    <a class="contacts-link-two" href="https://t.me/SwapsterBot">@SwapsterBot</a>
+                  </li>
+                  <li class="contacts-list-two-item flex">
+                    <span class="contacts-item-descr">Email</span>
+                    <a class="contacts-link-two" href="mailto:info@swapster.fi">info@swapster.fi</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-container flex">
+          <div class="mob">
+            <p class="logo-descr">© 2022 Swapster. Надёжное хранилище криптовалют. Выгодный обмен и моментальный вывод на карты всех российских банков.</p>
+          </div>
+          <div class="footer-left">
+            <a class="footer-link-left" href="#">Политика конфиденциальности</a>
+            <a class="footer-link-left" href="#">AML политика</a>
+            <a class="footer-link-left" href="#">Пользовательское соглашение</a>
+          </div>
+          <div class="footer-right pc">
+            <span class="footer-span-right">© 2022 Swapster</span>
+          </div>
+        </div>
+      </div>
+  </footer>
+  <script src="{% static 'js/acc1.js' %}?v=5.0"></script>
+  <script src="{% static 'js/moress.js' %}?v=5.0"></script>
+  <script src="{% static 'js/slider.js' %}?v=5.0"></script>
+  <script src="{% static 'js/translate1.js' %}?v=5.0"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script>$(() => {
+    $(".main-myButton").click(() => {
+        $(".content").slideToggle();
+        $("body").toggleClass("overlay");
+    });
+});</script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+<script src="https:/translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="{% static 'js/widgetone.js' %}?v=5.0"></script>
+<script src="{% static 'js/widgettwo.js' %}?v=5.0"></script>
+<script src="{% static 'js/widgetthree.js' %}?v=5.0"></script>
+<script src="{% static 'js/widgetfour.js' %}?v=5.0"></script>
+<script src="{% static 'js/time1.js' %}?v=5.0"></script>
+<script src="{% static 'js/widget.js' %}?v=6.0"></script>
+<script src="{%  static 'js/clamp1.js' %}?v=5.0"></script>
+<script>
+$(document).ready(function() {
+  var randomColor = Math.floor(Math.random()*16777215).toString(16);
+      $("#background").css("background-color", '#' + randomColor);
+  });
+</script>
+</body>
+</html>
